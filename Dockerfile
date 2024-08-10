@@ -2,9 +2,9 @@
 FROM oven/bun:1 as build-stage
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN bun install
 COPY . .
-RUN npm run build
+RUN bun run build
 
 # etapa de producción
 FROM nginx:latest as production-stage
