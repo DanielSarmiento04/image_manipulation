@@ -1,5 +1,5 @@
 # etapa de compilación
-FROM bun:latest as build-stage
+FROM oven/bun:1 as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
