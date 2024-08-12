@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 RUN bun i
 
-RUN export NODE_OPTIONS="--max-old-space-size=8192"
+RUN export NODE_OPTIONS="--max-old-space-size=18480"
 
 RUN bun run build
 
